@@ -50,7 +50,6 @@ body{
     .container{
         width: 95%;
         background-color: rgba(255, 0, 0, 0.295);
-        overflow: hidden;
     }
     #intro{
         padding: 15px;
@@ -63,6 +62,16 @@ body{
         display: block; /* adds a width to br element */
         content: ""; /* clears default height */
         margin-top: 0; /* zeroes top margin height */
+    }
+    #slider-container {
+        width: 100%;   
+    }
+    .slider-images{
+        margin-left: 29px;
+    }
+    #img-1, #img-2, #img-3, figcaption{
+        width: 100%;
+        
     }
 }
 
@@ -134,6 +143,7 @@ h2{
 #img-1, #img-2, #img-3{
     width: 100%;
     filter: drop-shadow(5px 5px 3px #545454);
+    border-radius: 15px;
 }
 figcaption{
     font-weight: bolder;
