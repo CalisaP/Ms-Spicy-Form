@@ -1,0 +1,220 @@
+body{
+    background-color: #f4f4f4; 
+    color: #555555;
+    font: normal 16px Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    background-image: url('images/background2\ color\ 50opacity.jpg');
+    background-position: center center;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 15px;;
+}
+@media (max-width: 1200px) {
+    .container{
+        width: 60%;
+        background-color: rgba(0, 128, 0, 0.295);
+    }
+    
+}
+@media (max-width: 1000px){
+    .container{
+        width: 75%;
+        background-color: rgba(0, 0, 255, 0.295);
+    }
+}
+@media (max-width: 780px) {
+    .container{
+        width: 85%;
+        background-color: rgba(128, 0, 128, 0.295);
+    }
+    .long-qty{ /* shifts the longest quantity fields to the next line by converting them to block elements*/
+        display: block;
+        padding-left: 15px;
+    }
+}
+@media (max-width: 650px){
+    .container{
+        width: 90%;
+        background-color: rgba(255, 166, 0, 0.295);
+    }
+    .med-qty{
+        display: block; 
+        padding-left: 15px;
+    }
+}
+@media (max-width: 590px) {
+    .container{
+        width: 95%;
+        background-color: rgba(255, 0, 0, 0.295);
+        overflow: hidden;
+    }
+    #intro{
+        padding: 15px;
+    }
+    .qty{ /* shifts all quantity fields to the next line by converting them to block elements*/
+        display: block; 
+        padding-left: 15px;
+    }
+    .details-breaks{
+        display: block; /* adds a width to br element */
+        content: ""; /* clears default height */
+        margin-top: 0; /* zeroes top margin height */
+    }
+}
+
+header{
+    background-image: url(images/light\ gray\ blank\ background.png);
+    padding: 1% 5%;
+}
+header #logo{
+    float: left;
+}
+header h1{
+    font-family: cursive;
+    font-size: 43px;
+    line-height: 1.2em;
+    text-align: center;
+    text-shadow: 2px 2px 5px #555555
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav li{
+    display: inline;
+}
+nav a{
+     color: #555555; 
+     text-decoration: none;
+     font-weight: bolder;
+     font-size: 18px;
+     padding-right: 30px;
+}
+
+.button{
+    background-color: #555555;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid #555555;
+    display: block;
+    margin: auto;
+}
+.button:hover{
+    background-color: #d9d9d9;
+    color: #c25a48;
+    border: 1px solid #545454;
+}
+.button:active{
+    background-color: #c25a48;
+    color: #d9d9d9;
+}
+
+.spicy{
+    color: #c25a48;
+}
+
+h2{
+    font-family: cursive;
+    font-size: 35px;
+    text-align: center;
+}
+
+#menu{
+    background-color: #545454;
+    color: #f4f4f4; 
+    padding: 5px 30px;
+    border-radius: 15px;
+    filter:drop-shadow(5px 8px 5px #545454);
+    background-image: url('images/dark\ gray\ background.png');
+} 
+#menu h2{
+    font-weight: lighter; 
+
+}
+#menu h3{
+   line-height: 0;
+}
+#menu li{
+    list-style-image: url('images/pepper\ 16px.png');
+}
+
+#order-form{
+    border: 1px dashed #c25a48;
+    padding: 15px 40px 50px 40px;
+    margin: 15px 0;
+    border-radius: 15px;
+    position: relative;
+}
+#order-form #customer-info, #order-details, #add-details, .button{
+    filter: drop-shadow(5px 8px 5px #545454);
+}
+#order-form fieldset{
+    background-color: #e6e6e6;
+    /* border: 3px dotted #ccc; */
+    /* border-color: #555555; */
+    border-radius: 15px;
+    line-height: 2em;
+    padding: 20px;
+    background-image: url('images/light\ gray\ blank\ background.png');
+}
+#order-form legend{
+    font-size: 23px;
+    font-weight: 600;
+}
+#order-form fieldset h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 10px;
+}
+#order-form fieldset p{
+    margin: 0;
+}
+#order-form input{
+    margin: 8px 5px;
+}
+#order-form #customer-info label{
+    display: block;
+}
+#order-form #customer-info input[type="text"], input[type="email"], textarea{
+    width: 98%;
+}
+#order-form #customer-info #date{
+    color: #555555;
+}
+#order-form #order-details .sub-section{
+    padding-left: 30px;
+}
+
+#fake-button{
+    text-decoration: none;
+}
+
+footer p{
+    text-align: center;
+}
+
+#thank-you{
+    background-color: #545454;
+    color: #f4f4f4; 
+    padding: 30px;
+    border-radius: 15px;
+    filter:drop-shadow(5px 8px 5px #545454);
+    background-image: url('images/dark\ gray\ background.png');
+    text-align: center;
+    margin-bottom: 50px;
+} 
+
+#thank-you-container{
+    width: 50%;
+}
+
+#thank-you-container h2{
+    line-height: 1.2em;
+}

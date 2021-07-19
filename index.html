@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ms. Spicy Gourmet Finger Foods</title>
+    <link rel="stylesheet" type="text/css" href="formstyle.css">
+    <!--https://www.facebook.com/Mr.Spiceno/-->
+    </head>
+    <body>
+        <header id="top">
+            <img id="logo" src="images/pepper 100.png" alt="Chili pepper logo" title="Chili Pepper"> 
+            <h1>Ms. <span class="spicy">Spicy</span> Gourmet Finger Foods</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#order-form">Order Form</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <main>
+                <section id="intro">
+                    <p>Welcome! We provide a variety of gourmet finger foods for any event or family occasion. Everything can be custom-made to your liking as we use the highest quality ingredients.</p>
+                    <p>All of our offerings are pre-made, frozen and ready to cook in your preferred style upon delivery!</p>
+                </section>
+                <section id="menu">
+                    <h2>Menu</h2>
+                    <!--https://www.facebook.com/Mr.Spiceno/photos/a.185344682051372/800890013830166-->
+                    <h3>Finger Foods</h3>
+                    <p>(All items frozen)</p>
+                    <ul>
+                        <li>Wontons: (mixed, Chinese & Jerk available)
+                            <ul>
+                                <li>Chicken (60 pcs) - TT$100</li>
+                                <li>Shrimp (60 pcs) - TT$100</li>
+                                <li>Veggie (60 pcs) - TT$100</li>
+                                <li>Cream Cheese (30 pcs) - TT$65</li>
+                                <li>Tandoori Chicken (30 pcs) - TT$65</li>
+                            </ul>
+                        </li>
+                        <li>Mini Spring Rolls (12 pcs) - TT$80</li>
+                        <li>Pot Stickers (30 pcs) - TT$80</li>
+                    </ul>
+            
+                    <h3>Sauces</h3>
+                    <ul>
+                        <li>Trini Siracha Sauce - TT$39 per bottle</li>
+                    </ul>
+                </section>
+
+                <section id="order-form">
+                    <h2>Order Form</h2>
+                    <form action="" method="POST">
+                        <p>Please complete the form below to place your order.</p>
+                        <p>(All required fields are highlighted with an <span class="spicy">*</span>.)</p>
+                        
+                        <fieldset id="customer-info">
+                            <legend>Customer Information</legend>
+                            <label for="name">Full Name<span class="spicy">*</span></label>
+                            <input id="name" name="name" type="text" placeholder="First and Last Name" required>
+                            <br />
+                            <label for="street">Street Address<span class="spicy">*</span></label>
+                            <input id="street" name="street" type="text" placeholder="House/LP# & Street Name" required>
+                            <br />
+                            <label for="city">City/Borough<span class="spicy">*</span></label>
+                            <input id="city" name="city" type="text" placeholder="City/Borough" required>
+                            <br />
+                            <label for="email">Email Address<span class="spicy">*</span></label>
+                            <input id="email" name="email" type="email" placeholder="e.g. joe@gmail.com" required>
+                            <br />
+                            <label for="phone">Phone Number<span class="spicy">*</span></label>
+                            <input id="phone" name="phone" type="tel" placeholder="e.g. 123-4567" pattern="[0-9]{3}-[0-9]{4}" required>
+                            <br />
+                            <label for="date"> Requested Delivery Date:<span class="spicy">*</span></label>
+                            <input id="date" name="date" type="date" required> <!--JS will be needed to set relative date limitations-->
+                            <p><span class="spicy">(Please note that orders must be placed 2-3 days in advance.)</span></p>
+                        </fieldset>
+                        <br />
+
+                        <fieldset id="order-details">
+                            <legend>Order Details</legend>
+                            <p>Please select an item and enter a quantity for each item selected.</p>
+                            
+                            <h3>Wontons</h3>
+                            <label for="chicken">Chicken Wontons (60pcs - TT$100)</label>
+                            <input id="chicken" name="wontons" value="chicken" type="checkbox"> 
+                            <span class="qty">
+                                <label for="chicken-qty">Quantity</label>
+                                <input for="chicken-qty" name="chicken-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+                            <label for="shrimp">Shrimp Wontons (60pcs - TT$100)</label>
+                            <input id="shrimp" name="wontons" value="shrimp" type="checkbox"> 
+                            <span class="qty">
+                                <label for="shrimp-qty">Quantity</label>
+                                <input for="shrimp-qty" name="shrimp-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+                            <label for="veggie">Veggie Wontons (60pcs - TT$100)</label>
+                            <input id="veggie" name="wontons" value="veggie" type="checkbox"> 
+                            <span class="qty">
+                                <label for="veggie-qty">Quantity</label>
+                                <input for="veggie-qty" name="veggie-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+                            <label for="mixed">Mixed Wontons (60pcs - TT$100)</label>
+                            <input id="mixed" name="wontons" value="mixed" type="checkbox"> 
+                            <span class="qty">
+                                <label for="mx-qty">Quantity</label>
+                                <input for="mx-qty" name="mx-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+                            <div class="sub-section"> <!--JS code to make selection mandatory if mixed checkbox is selected-->
+                                <p>What kind of mix? (select all that apply)</p>
+                                <label for="mx-chicken">Chicken</label>
+                                <input id="mx-chicken" name="mixed-wontons" value="mx-chicken" type="checkbox">
+                                <label for="mx-shrimp">Shrimp</label>
+                                <input id="mx-shrimp" name="mixed-wontons" value="mx-shrimp" type="checkbox">
+                                <label for="mx-veggie">Veggie</label>
+                                <input id="mx-veggie" name="mixed-wontons" value="mx-veggie" type="checkbox">
+                            </div>
+
+                            <!-- for multi-select input
+                            <label id="sublabel" for="mxdetails">What kind of mix? (select all that apply)</label>
+                            
+                                <select id="mxdetails" name="mxdetails" multiple>
+                                <option value="chickenmix">Chicken</option>
+                                <option value="shrimpmix">Shrimp</option>
+                                <option value="veggiemix">Veggie</option>
+                            </select>-->
+
+                            <label for="cream-cheese">Cream Cheese Wontons (30pcs - TT$65)</label>
+                            <input id="cream-cheese" name="wontons" value="cream-cheese" type="checkbox"> 
+                            <span class="long-qty">
+                                <label for="cc-qty">Quantity</label>
+                                <input for="cc-qty" name="cc-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+                            <label for="t-chicken">Tandoori Chicken Wontons (30pcs - TT$65)</label>
+                            <input id="t-chicken" name="wontons" value="t-chicken" type="checkbox"> 
+                            <span class="long-qty">
+                                <label for="tc-qty">Quantity</label>
+                                <input for="tc-qty" name="tc-qty" type="number" min="0" max="10">
+                            </span>
+                            <br class="details-breaks" />
+
+                            <h3>Mini Spring Rolls</h3>
+                            <label for="s-rolls">Mini Spring Rolls (12pcs - TT$80)</label>
+                            <input id="s-rolls" name="s-rolls" value="s-rolls" type="checkbox"> 
+                            <span class="qty">
+                                <label for="s-rolls-qty">Quantity</label>
+                                <input for="s-rolls-qty" name="s-rolls-qty" type="number" min="0" max="10">
+                            </span>
+
+                            <h3>Pot Stickers</h3>
+                            <label for="p-stickers">Pot Stickers (30pcs - TT$80)</label>
+                            <input id="p-stickers" name="p-stickers" value="p-stickers" type="checkbox"> 
+                            <span class="qty">
+                                <label for="p-stickers-qty">Quantity</label>
+                                <input for="p-stickers-qty" name="p-stickers-qty" type="number" min="0" max="10">
+                            </span>
+
+                            <h3>Sauces</h3>
+                            <label for="s-sauce">Trini Siracha Sauce (TT$39 per bottle)</label>
+                            <input id="s-sauce" name="s-sauce" value="s-sauce" type="checkbox"> 
+                            <span class="med-qty">
+                                <label for="s-sauce-qty">Quantity</label>
+                                <input for="s-sauce-qty" name="s-sauce-qty" type="number" min="0" max="10">
+                            <!--JS code functionality to be built in: quantity to be required if box is checked, total to be derived from selections.-->
+                            </span>
+                        </fieldset>
+                        <br />
+
+                        <fieldset id="add-details">
+                            <legend>Additional Details</legend>
+                            <p>Is there anything else you'd like us to know?</p>
+                            <label for="details">Tell us here:</label>
+                            <br />
+                            <textarea id="details" name="details" rows="5" cols="40"></textarea>
+                        </fieldset>
+                        <br />
+                        <br />
+                        <a id="fake-button" href="Submit.html">
+                            <button type="button" class="button">"Order" Now!</button>
+                        </a>
+                        <!--<input class="button" type="submit" value="Order Now!">-->
+                    </form>
+                </section>
+            </main>
+        <footer>
+            <p id="contact">Contact us at 123-4567!</p>
+            <p>Copyright &copy; 2021 Ms. <span class="spicy">Spicy</span></p>
+        </footer>
+        </section>
+    </body>
+</html>
