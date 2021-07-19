@@ -6,11 +6,12 @@ body{
     margin: 0;
     background-image: url('image/background2\ color\ 50opacity.jpg');
     background-position: center center;
+
 }
 .container{
     width: 50%;
     margin: auto;
-    padding: 15px;;
+    padding: 15px;
 }
 @media (max-width: 1200px) {
     .container{
@@ -123,6 +124,25 @@ h2{
     font-family: cursive;
     font-size: 35px;
     text-align: center;
+}
+
+#slider-container .slider-images{
+    float:left;
+    width: 33.3%;
+    padding: 5px;
+}
+#img-1, #img-2, #img-3{
+    width: 100%;
+    filter: drop-shadow(5px 5px 3px #545454);
+}
+figcaption{
+    font-weight: bolder;
+    text-align: center;
+}
+#slider-container::after{ /*removes float*/
+    content:"";
+    clear: both;
+    display: block;
 }
 
 #menu{
