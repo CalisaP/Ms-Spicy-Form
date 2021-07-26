@@ -8,15 +8,11 @@ body{
     background-position: center center;
 
 }
-.container{
-    width: 50%;
-    margin: auto;
-    padding: 15px;
-}
+
 @media (max-width: 1200px) {
     .container{
         width: 60%;
-        /* background-color: rgba(0, 128, 0, 0.295);*/ /* For breakpoint visibility*/
+        /*background-color: rgba(0, 128, 0, 0.295); /* For breakpoint visibility*/
     }
     
 }
@@ -27,13 +23,25 @@ body{
     }
 }
 @media (max-width: 780px) {
+    header{
+        height: 160px;
+    }
+    header #logo{
+        height: 50px;
+        width: 50px;
+    }
     .container{
         width: 85%;
+        position: relative;
+        top: 220px;
         /*background-color: rgba(128, 0, 128, 0.295);*/ /* For breakpoint visibility*/
     }
     .long-qty{ /* shifts the longest quantity fields to the next line by converting them to block elements*/
         display: block;
         padding-left: 15px;
+    }
+    #submit-header{
+        height: 100px;
     }
 }
 @media (max-width: 650px){
@@ -44,6 +52,9 @@ body{
     .med-qty{
         display: block; 
         padding-left: 15px;
+    }
+    header{
+        height: 190px;
     }
 }
 @media (max-width: 590px) {
@@ -73,11 +84,28 @@ body{
         width: 100%;
         
     }
+    #submit-header{
+        height: 150px;
+    }
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+    top: 180px;
+    z-index: 5;
 }
 
 header{
     background-image: url(image/light\ gray\ blank\ background.png);
     padding: 1% 5%;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    min-height: 150px;
+    z-index: 10;
 }
 header #logo{
     float: left;
@@ -102,6 +130,10 @@ nav a{
      font-weight: bolder;
      font-size: 18px;
      padding-right: 30px;
+}
+
+#submit-header{
+    min-height: 100px;
 }
 
 .button{
@@ -239,6 +271,7 @@ footer p{
     background-image: url('image/dark\ gray\ background.png');
     text-align: center;
     margin-bottom: 50px;
+
 } 
 
 #thank-you-container h2{
