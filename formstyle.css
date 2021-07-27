@@ -9,10 +9,19 @@ body{
 
 }
 
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+    top: 180px;
+    z-index: 5;
+}
+
 @media (max-width: 1200px) {
     .container{
         width: 60%;
-        /*background-color: rgba(0, 128, 0, 0.295); /* For breakpoint visibility*/
+        /*background-color: rgba(0, 128, 0, 0.295);*/ /* For breakpoint visibility*/
     }
     
 }
@@ -82,20 +91,10 @@ body{
     }
     #img-1, #img-2, #img-3, figcaption{
         width: 100%;
-        
     }
     #submit-header{
         height: 150px;
     }
-}
-
-.container{
-    width: 50%;
-    margin: auto;
-    padding: 15px;
-    position: relative;
-    top: 180px;
-    z-index: 5;
 }
 
 header{
@@ -175,7 +174,7 @@ h2{
 #img-1, #img-2, #img-3{
     width: 100%;
     filter: drop-shadow(5px 5px 3px #545454);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 figcaption{
     font-weight: bolder;
@@ -209,7 +208,7 @@ figcaption{
 #order-form{
     border: 1px dashed #c25a48;
     padding: 15px 40px 50px 40px;
-    margin: 15px 0;
+    margin: 35px 0;
     border-radius: 15px;
     position: relative;
 }
@@ -218,17 +217,27 @@ figcaption{
 }
 #order-form fieldset{
     background-color: #e6e6e6;
-    /* border: 3px dotted #ccc; */
-    /* border-color: #555555; */
     border-radius: 15px;
     line-height: 2em;
     padding: 20px;
     background-image: url('image/light\ gray\ blank\ background.png');
 }
-#order-form legend{
-    font-size: 23px;
-    font-weight: 600;
+#order-form input, textarea {
+    background-color: #ededed;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    filter: drop-shadow(2px 2px 1px #8d8c8c);
 }
+
+#order-form legend {
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #555555;
+    padding: 3px 10px;
+    font-size: 20px;
+    color: #ededed;
+}
+
 #order-form fieldset h3{
     font-size: 18px;
     font-weight: 600;
@@ -248,7 +257,7 @@ figcaption{
     width: 98%;
 }
 #order-form #customer-info #date{
-    color: #555555;
+    color: #757575;
 }
 #order-form #order-details .sub-section{
     padding-left: 30px;
