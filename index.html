@@ -11,13 +11,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#menu">Menu</a>
+                        <a  href="#menu-anchor">Menu</a>
                     </li>
                     <li>
-                        <a href="#order-form">Order Form</a>
+                        <a href="#order-form-anchor">Order Form</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact Us</a>
+                        <a href="#contact-anchor">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -54,6 +54,7 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </section> -->
                 <section id="menu">
+                    <a class="anchor" id="menu-anchor"></a> <!-- To address offset from fixed header-->
                     <h2>Menu</h2>
                     <h3>Finger Foods</h3>
                     <p>(All items frozen)</p>
@@ -78,6 +79,7 @@
                 </section>
 
                 <section id="order-form">
+                    <a class="anchor" id="order-form-anchor"></a> <!-- To address offset from fixed header-->
                     <h2>Order Form</h2>
                     <form action="" method="POST">
                         <p>Please complete the form below to place your order.</p>
@@ -218,6 +220,7 @@
             </main>
         <footer>
             <p id="contact">Contact us at 123-4567!</p>
+            <a class="anchor" id="contact-anchor"></a> <!-- To address offset from fixed header-->
             <p>Copyright &copy; 2021 Ms. <span class="spicy">Spicy</span></p>
         </footer>
         </section>

@@ -130,6 +130,12 @@ nav a{
      font-size: 18px;
      padding-right: 30px;
 }
+.anchor{ /* addresses offset caused by fixed header */
+    display: block;
+    position: relative;
+    top: -190px;
+    visibility: hidden;
+}
 
 #submit-header{
     min-height: 100px;
