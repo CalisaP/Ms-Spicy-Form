@@ -3,108 +3,28 @@ body{
     color: #555555;
     font: normal 16px Arial, Helvetica, sans-serif;
     line-height: 1.5em;
-    margin: 0;
+ /*   margin: 0;*/
     background-image: url('image/background2\ color\ 50opacity.jpg');
     background-position: center center;
-
-}
-
-.container{
-    width: 50%;
-    margin: auto;
-    padding: 15px;
-    position: relative;
-    top: 180px;
-    z-index: 5;
-}
-
-@media (max-width: 1200px) {
-    .container{
-        width: 60%;
-        /*background-color: rgba(0, 128, 0, 0.295);*/ /* For breakpoint visibility*/
-    }
-    
-}
-@media (max-width: 1000px){
-    .container{
-        width: 75%;
-        /*background-color: rgba(0, 0, 255, 0.295);*/ /* For breakpoint visibility*/
-    }
-}
-@media (max-width: 780px) {
-    header{
-        height: 160px;
-    }
-    header #logo{
-        height: 50px;
-        width: 50px;
-    }
-    .container{
-        width: 85%;
-        position: relative;
-        top: 220px;
-        /*background-color: rgba(128, 0, 128, 0.295);*/ /* For breakpoint visibility*/
-    }
-    .long-qty{ /* shifts the longest quantity fields to the next line by converting them to block elements*/
-        display: block;
-        padding-left: 15px;
-    }
-    #submit-header{
-        height: 100px;
-    }
-}
-@media (max-width: 650px){
-    .container{
-        width: 90%;
-        /*background-color: rgba(255, 166, 0, 0.295);*/ /* For breakpoint visibility*/
-    }
-    .med-qty{
-        display: block; 
-        padding-left: 15px;
-    }
-    header{
-        height: 190px;
-    }
-}
-@media (max-width: 590px) {
-    .container{
-        width: 95%;
-        /*background-color: rgba(255, 0, 0, 0.295);*/ /* For breakpoint visibility*/
-    }
-    #intro{
-        padding: 15px;
-    }
-    .qty{ /* shifts all quantity fields to the next line by converting them to block elements*/
-        display: block; 
-        padding-left: 15px;
-    }
-    .details-breaks{
-        display: block; /* adds a width to br element */
-        content: ""; /* clears default height */
-        margin-top: 0; /* zeroes top margin height */
-    }
-    #slider-container {
-        width: 100%;   
-    }
-    .slider-images{
-        margin-left: 29px;
-    }
-    #img-1, #img-2, #img-3, figcaption{
-        width: 100%;
-    }
-    #submit-header{
-        height: 150px;
-    }
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
-    background-image: url(image/light\ gray\ blank\ background.png);
+    /*background-image: url(image/light\ gray\ blank\ background.png);*/
     padding: 1% 5%;
+    /*
     position: fixed;
+    */
     top: 0;
     width: 95%;
     min-height: 150px;
+    /*
     z-index: 10;
+    */
+    background-color: hotpink;
 }
 header #logo{
     float: left;
@@ -127,40 +47,106 @@ nav a{
      color: #555555; 
      text-decoration: none;
      font-weight: bolder;
-     font-size: 18px;
+     font-size: 20px;
      padding-right: 30px;
 }
-.anchor{ /* addresses offset caused by fixed header placement */
+/*
+.anchor{ 
     display: block;
     position: relative;
     top: -190px;
     visibility: hidden;
 }
+*/
 
 #submit-header{
     min-height: 100px;
 }
 
-.button{
-    background-color: #555555;
-    color: #f4f4f4;
-    font-weight: bold;
-    font-size: larger;
-    border-radius: 5px;
-    padding: 10px 15px;
-    border: 1px solid #555555;
-    display: block;
-    margin: auto;
+.container{
+    max-width: 95%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
-.button:hover{
-    background-color: #d9d9d9;
-    color: #c25a48;
-    border: 1px solid #545454;
+
+/*
+@media (max-width: 1200px) {
+    .container{
+        width: 60%;
+    }
+    
 }
-.button:active{
-    background-color: #c25a48;
-    color: #d9d9d9;
+
+@media (max-width: 1000px){
+    .container{
+        width: 75%;
+    }
 }
+@media (max-width: 780px) {
+    header{
+        height: 160px;
+    }
+    header #logo{
+        height: 50px;
+        width: 50px;
+    }
+    .container{
+        width: 85%;
+        position: relative;
+        top: 220px;
+    }
+    .long-qty{ 
+        display: block;
+        padding-left: 15px;
+    }
+    #submit-header{
+        height: 100px;
+    }
+}
+@media (max-width: 650px){
+    .container{
+        width: 90%;
+    }
+    .med-qty{
+        display: block; 
+        padding-left: 15px;
+    }
+    header{
+        height: 190px;
+    }
+}
+@media (max-width: 590px) {
+    .container{
+        width: 95%;
+    }
+    #intro{
+        padding: 15px;
+    }
+    .qty{ 
+        display: block; 
+        padding-left: 15px;
+    }
+    .details-breaks{
+        display: block; 
+        content: ""; 
+        margin-top: 0; 
+    }
+    #slider-container {
+        width: 100%;   
+    }
+    .slider-images{
+        margin-left: 29px;
+    }
+    #img-1, #img-2, #img-3, figcaption{
+        width: 100%;
+    }
+    #submit-header{
+        height: 150px;
+    }
+}
+*/
 
 .spicy{
     color: #c25a48;
@@ -168,44 +154,52 @@ nav a{
 
 h2{
     font-family: cursive;
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
 }
 
-#slider-container .slider-images{
-    float:left;
-    width: 33.3%;
-    padding: 5px;
+#intro{
+    max-width: 70%;
+    margin: auto;
 }
-#img-1, #img-2, #img-3{
-    width: 100%;
-    filter: drop-shadow(5px 5px 3px #545454);
-    border-radius: 10px;
-}
-figcaption{
-    font-weight: bolder;
-    text-align: center;
-}
-#slider-container::after{ /*removes float*/
-    content:"";
-    clear: both;
-    display: block;
+#intro p{
+    font-size: 20px;
 }
 
 #menu{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     background-color: #545454;
     color: #f4f4f4; 
     padding: 5px 30px;
     border-radius: 15px;
     filter:drop-shadow(5px 8px 5px #545454);
     background-image: url('image/dark\ gray\ background.png');
-} 
+    margin: 35px auto;
+    max-width: 70%;
+}
 #menu h2{
     font-weight: lighter; 
-
 }
-#menu h3{
-   line-height: 0;
+#slider-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#img-1, #img-2, #img-3, #img-4{
+    max-width: 150px;
+    filter: drop-shadow(5px 5px 3px #000000);
+    border-radius: 10px;
+}
+figcaption{
+    text-align: center;
+}
+#menu-text h3, #menu-text #frozen{
+    margin: 0;
+    text-align: center;
 }
 #menu li{
     list-style-image: url('image/pepper\ 16px.png');
@@ -214,9 +208,9 @@ figcaption{
 #order-form{
     border: 1px dashed #c25a48;
     padding: 15px 40px 50px 40px;
-    margin: 35px 0;
+    margin: auto;
     border-radius: 15px;
-    position: relative;
+    max-width: 70%;
 }
 #order-form #customer-info, #order-details, #add-details, .button{
     filter: drop-shadow(5px 8px 5px #545454);
@@ -271,6 +265,27 @@ figcaption{
 
 #fake-button{
     text-decoration: none;
+}
+
+.button{
+    background-color: #555555;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid #555555;
+    display: block;
+    margin: auto;
+}
+.button:hover{
+    background-color: #d9d9d9;
+    color: #c25a48;
+    border: 1px solid #545454;
+}
+.button:active{
+    background-color: #c25a48;
+    color: #d9d9d9;
 }
 
 footer p{
