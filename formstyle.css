@@ -3,9 +3,12 @@ body{
     color: #555555;
     font: normal 16px Arial, Helvetica, sans-serif;
     line-height: 1.5em;
- /*   margin: 0;*/
+    margin: 0;
     background-image: url('image/background2\ color\ 50opacity.jpg');
     background-position: center center;
+}
+
+.flexbox-container{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -13,139 +16,69 @@ body{
 }
 
 header{
-    background-image: url(image/light\ gray\ blank\ background.png);
-    padding: 1% 5%;
-    /*
+    background-image: url('image/light\ gray\ blank\ background.png');
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
     position: fixed;
-    */
     top: 0;
-    width: 95%;
-    min-height: 150px;
-    /*
     z-index: 10;
-    */
 }
 header #logo{
-    float: left;
+    margin-right: 15px;
+    filter:drop-shadow(2px 2px 2px #555555);
+}
+header #logo:hover{
+    filter:drop-shadow(5px 5px 5px #555555);
 }
 header h1{
     font-family: cursive;
     font-size: 43px;
     line-height: 1.2em;
     text-align: center;
-    text-shadow: 2px 2px 5px #555555
+    text-shadow: 2px 2px 5px #555555;
+}
+header h1:hover{
+    text-shadow: 3px 3px 5px #777575;
+}
+header a{
+    color: #555555; 
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-right: 30px;
+}
+nav{
+    flex-basis: 100%; /* to force the navbar to drop to a new row in the flexbox. */
 }
 nav ul{
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
-nav li{
-    display: inline;
+nav ul li:hover{
+    text-shadow: 3px 3px 3px #8a8888;
 }
-nav a{
-     color: #555555; 
-     text-decoration: none;
-     font-weight: bolder;
-     font-size: 20px;
-     padding-right: 30px;
-}
-/*
-.anchor{ 
+.anchor{ /* to address fixed header offset */
     display: block;
     position: relative;
-    top: -190px;
+    top: -200px;
     visibility: hidden;
-}
-*/
-
-#submit-header{
-    min-height: 100px;
 }
 
 .container{
-    max-width: 95%;
+    margin-top: 170px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
-
-/*
-@media (max-width: 1200px) {
-    .container{
-        width: 60%;
-    }
-    
-}
-
-@media (max-width: 1000px){
-    .container{
-        width: 75%;
-    }
-}
-@media (max-width: 780px) {
-    header{
-        height: 160px;
-    }
-    header #logo{
-        height: 50px;
-        width: 50px;
-    }
-    .container{
-        width: 85%;
-        position: relative;
-        top: 220px;
-    }
-    .long-qty{ 
-        display: block;
-        padding-left: 15px;
-    }
-    #submit-header{
-        height: 100px;
-    }
-}
-@media (max-width: 650px){
-    .container{
-        width: 90%;
-    }
-    .med-qty{
-        display: block; 
-        padding-left: 15px;
-    }
-    header{
-        height: 190px;
-    }
-}
-@media (max-width: 590px) {
-    .container{
-        width: 95%;
-    }
-    #intro{
-        padding: 15px;
-    }
-    .qty{ 
-        display: block; 
-        padding-left: 15px;
-    }
-    .details-breaks{
-        display: block; 
-        content: ""; 
-        margin-top: 0; 
-    }
-    #slider-container {
-        width: 100%;   
-    }
-    .slider-images{
-        margin-left: 29px;
-    }
-    #img-1, #img-2, #img-3, figcaption{
-        width: 100%;
-    }
-    #submit-header{
-        height: 150px;
-    }
-}
-*/
 
 .spicy{
     color: #c25a48;
@@ -158,7 +91,7 @@ h2{
 }
 
 #intro{
-    max-width: 70%;
+    max-width: 90%;
     margin: auto;
 }
 #intro p{
@@ -171,29 +104,29 @@ h2{
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #545454;
+    background-color: #545454; /* backup in case image isn't available. */
     color: #f4f4f4; 
     padding: 5px 30px;
     border-radius: 15px;
     filter:drop-shadow(5px 8px 5px #545454);
     background-image: url('image/dark\ gray\ background.png');
-    margin: 35px auto;
-    max-width: 70%;
+    margin: 50px auto;
+    max-width: 100%;
 }
 #menu h2{
     font-weight: lighter; 
 }
-#slider-container{
+.slider-container{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
-#img-1, #img-2, #img-3, #img-4{
+.slider-container #img-1, #img-2, #img-3, #img-4{
     max-width: 150px;
     filter: drop-shadow(5px 5px 3px #000000);
     border-radius: 10px;
 }
-figcaption{
+.slider-container figcaption{
     text-align: center;
 }
 #menu-text h3, #menu-text #frozen{
@@ -207,9 +140,9 @@ figcaption{
 #order-form{
     border: 1px dashed #c25a48;
     padding: 15px 40px 50px 40px;
-    margin: auto;
+    margin: 50px auto;
     border-radius: 15px;
-    max-width: 70%;
+    max-width: 95%;
 }
 #order-form #customer-info, #order-details, #add-details, .button{
     filter: drop-shadow(5px 8px 5px #545454);
@@ -291,18 +224,101 @@ footer p{
     text-align: center;
 }
 
+/* Submit Page styling */
+
 #thank-you{
     background-color: #545454;
     color: #f4f4f4; 
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     border-radius: 15px;
     filter:drop-shadow(5px 8px 5px #545454);
     background-image: url('image/dark\ gray\ background.png');
     text-align: center;
-    margin-bottom: 50px;
-
+    margin: 130px auto 30px auto;
+    max-width: 50%;
 } 
-
-#thank-you-container h2{
+#thank-you h2{
     line-height: 1.2em;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1920px){
+    .container{
+        width: 80%;
+    }
+    #menu{
+        width: 80%;
+    }
+    #order-form{
+        width: 60%;
+    }
+}
+@media (max-width: 1500px){
+    .container{
+        width: 85%;
+    }
+    #order-form{
+        width: 65%;
+    }
+}
+@media (max-width: 1100px){
+    .container{
+        width: 90%;
+    }
+    #order-form{
+        width: 70%;
+    }
+}
+@media (max-width: 800px){
+    .container{
+        width: 95%;
+        top: 220px;
+    }
+    #order-form{
+        width: 75%;
+    }
+}
+@media (max-width: 735px){  
+    header #logo{
+        visibility: hidden;
+        position: absolute;
+    }
+    .container{
+        width: 100%;
+    }
+    #menu{
+        width: 85%;
+    }
+    #order-form{
+        width: 80%;
+    }
+}
+@media (max-width: 630px){
+    .long-qty{ 
+        display: block;
+        padding-left: 15px;
+    }
+    .details-breaks{ 
+        display: block; 
+        content: ""; 
+        margin-top: 0; 
+    }
+}
+@media (max-width: 600px){
+    .container{
+        margin-top: 220px;
+    }
+    .med-qty{
+        display: block; 
+        padding-left: 15px;
+    }
+}
+@media (max-width: 555px){
+    .qty{ 
+        display: block; 
+        padding-left: 15px;
+    }
+    #thank-you{
+        margin-top: 180px;
+    }
 }

@@ -5,9 +5,10 @@
         <link rel="stylesheet" type="text/css" href="formstyle.css">
     </head>
     <body>
+        <section class="flexbox-container">
         <header id="top">
-            <img id="logo" src="image/pepper 100.png" alt="Chili pepper logo" title="Chili Pepper"> 
-            <h1>Ms. <span class="spicy">Spicy</span> Gourmet Finger Foods</h1>
+            <a href="#intro-anchor"><img id="logo" src="image/pepper 100.png" alt="Chili pepper logo" title="Chili Pepper"></a>
+            <a href="#intro-anchor"><h1>Ms. <span class="spicy">Spicy</span> Gourmet Finger Foods</h1></a>
             <nav>
                 <ul>
                     <li>
@@ -22,16 +23,19 @@
                 </ul>
             </nav>
         </header>
+
         <section class="container">
             <main>
+                <a class="anchor" id="intro-anchor"></a> <!-- To address offset from fixed header-->
                 <section id="intro">
                     <p>Welcome! We provide a variety of gourmet finger foods for any event or family occasion. Everything can be custom-made to your liking as we use the highest quality ingredients.</p>
                     <p>All of our offerings are pre-made, frozen and ready to cook in your preferred style upon delivery!</p>
                 </section>
+
                 <section id="menu">
                     <a class="anchor" id="menu-anchor"></a> <!-- To address offset from fixed header-->
                     <h2>Menu</h2>
-                    <section id="slider-container">
+                    <section class="slider-container">
                         <!--Images and captions-->
                         <figure class="slider-images" >
                             <img id="img-1" src="image/wonton-appetizer.jpeg" alt="Wontons" />
@@ -48,7 +52,7 @@
                         <figure class="slider-images">
                             <img id="img-4" src="image/siracha.jpeg" alt="Siracha Sauce" />
                             <figcaption class="img-caption">Siracha Sauce</figcaption>
-                        </figure>
+                        </figure>                        
                         <!--Slider to be added; needs JS-->
                             <!--buttons-->
                             <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -76,7 +80,6 @@
                             <li>Mini Spring Rolls (12 pcs) - TT$80</li>
                             <li>Pot Stickers (30 pcs) - TT$80</li>
                         </ul>
-                
                         <h3>Sauces</h3>
                         <ul>
                             <li> Siracha Sauce - TT$39 per bottle</li>
@@ -230,5 +233,6 @@
                 <p>Copyright &copy; 2021 Ms. <span class="spicy">Spicy</span></p>
             </footer>
         </section>
+    </section>
     </body>
 </html>
